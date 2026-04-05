@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/Header";
@@ -13,25 +13,25 @@ const inter = Inter({
 
 
 export const metadata: Metadata = {
-  title: "Aphasia Reverbis | Terapist KontrollÃ¼ Dijital Rehabilitasyon",
+  title: "Aphasia Reverbis | Terapist Kontrollü Dijital Rehabilitasyon",
   description:
-    "TÃ¼rkiyeâ€™nin ilk terapist kontrollÃ¼ afazi rehabilitasyon platformu. TÃœBÄ°TAK 1812 destekli veri odaklÄ± Ã§Ã¶zÃ¼m.",
+    "Türkiye'nin ilk terapist kontrollü afazi rehabilitasyon platformu. TÜBİTAK 1812 destekli veri odaklı çözüm.",
   icons: {
     icon: [{ url: "/images/AphasiaReverbisico.ico", type: "image/x-icon" }],
     apple: [{ url: "/images/AphasiaReverbisico.ico", type: "image/x-icon" }],
   },
   openGraph: {
-    title: "Aphasia Reverbis | Terapist KontrollÃ¼ Dijital Rehabilitasyon",
+    title: "Aphasia Reverbis | Terapist Kontrollü Dijital Rehabilitasyon",
     description:
-      "TÃ¼rkiyeâ€™nin ilk terapist kontrollÃ¼ afazi rehabilitasyon platformu. TÃœBÄ°TAK 1812 destekli veri odaklÄ± Ã§Ã¶zÃ¼m.",
+      "Türkiye'nin ilk terapist kontrollü afazi rehabilitasyon platformu. TÜBİTAK 1812 destekli veri odaklı çözüm.",
     type: "website",
     locale: "tr_TR",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Aphasia Reverbis | Terapist KontrollÃ¼ Dijital Rehabilitasyon",
+    title: "Aphasia Reverbis | Terapist Kontrollü Dijital Rehabilitasyon",
     description:
-      "TÃ¼rkiyeâ€™nin ilk terapist kontrollÃ¼ afazi rehabilitasyon platformu. TÃœBÄ°TAK 1812 destekli veri odaklÄ± Ã§Ã¶zÃ¼m.",
+      "Türkiye'nin ilk terapist kontrollü afazi rehabilitasyon platformu. TÜBİTAK 1812 destekli veri odaklı çözüm.",
   },
 };
 
