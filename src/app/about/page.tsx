@@ -18,7 +18,7 @@ const team: TeamMember[] = [
     bio: "Aphasia Reverbis’in stratejik planlamasını ve AR-GE süreçlerini yönetir. Yatırımcı ilişkileri ve müşteri yönetiminde liderlik ederek projenin vizyonunu belirler.",
     skills: ["#Liderlik", "#Strateji", "#Python", "#AR-GE"],
     imageSrc: "/images/Founders/serhat-polat.jpeg",
-    linkedinHref: "#",
+    linkedinHref: "https://www.linkedin.com/in/serhat-polat-9624a6344/",
   },
   {
     name: "Mesut DAĞ",
@@ -26,7 +26,7 @@ const team: TeamMember[] = [
     bio: "Projenin mobil uygulama mimarisinin geliştirilmesi ve teknik altyapı süreçlerinden sorumludur. Bulut tabanlı sistemlerin entegrasyonu, veri tabanı yönetimi ve yazılım test süreçlerini yürüterek platformun güvenli ve kararlı bir yapıda çalışmasını sağlar.",
     skills: ["#MobilGeliştirme", "#C#", "#AWS/Azure", "#SQL"],
     imageSrc: "/images/Founders/mesut-dag.jpeg",
-    linkedinHref: "#",
+    linkedinHref: "https://www.linkedin.com/in/mesut-da%C4%9F-b781a0215/",
   },
   {
     name: "Berk AĞBABA",
@@ -34,7 +34,7 @@ const team: TeamMember[] = [
     bio: "Kullanıcı arayüzü ve deneyimi süreçlerinin başındadır. Projenin görsel kimliğini oluşturur ve tasarım odaklı düşünce yapısını AR-GE süreçlerine entegre eder.",
     skills: ["#UI/UX", "#Figma", "#Tasarım", "#Frontend"],
     imageSrc: "/images/Founders/berk-agbaba.jpeg",
-    linkedinHref: "#",
+    linkedinHref: "https://www.linkedin.com/in/berk-a%C4%9Fbaba-938315210/",
   },
   {
     name: "Yakup KARAAVCI",
@@ -42,7 +42,7 @@ const team: TeamMember[] = [
     bio: "Yeni teknolojilerin araştırılması ve kalite güvence (QA) süreçlerini yönetir. Ürün yönetimi ve kullanıcı deneyimi standartlarının belirlenmesinde aktif rol oynar.",
     skills: ["#ÜrünYönetimi", "#QA", "#C++", "#SQL"],
     imageSrc: "/images/Founders/yakup-karaavcı.jpeg",
-    linkedinHref: "#",
+    linkedinHref: "https://www.linkedin.com/in/yakup-karaavc%C4%B1-92316337b/",
   },
   {
     name: "Doğukan KALYON",
@@ -50,7 +50,7 @@ const team: TeamMember[] = [
     bio: "Teknik altyapı çalışmalarının yanı sıra müşteri memnuniyeti, geri bildirim analizi ve dokümantasyon süreçlerini yöneterek kullanıcı ile ürün arasındaki köprüyü kurar.",
     skills: ["#Müşteriİlişkileri", "#HTML/CSS", "#Dokümantasyon", "#SQL"],
     imageSrc: "/images/Founders/dogukan-kalyon.jpeg",
-    linkedinHref: "#",
+    linkedinHref: "https://www.linkedin.com/in/do%C4%9Fukan-kalyon-0a8b2b37a/",
   },
 ];
 
