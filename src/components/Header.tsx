@@ -24,8 +24,7 @@ export function Header() {
             alt="Aphasia Reverbis Logo"
             className="mr-4 h-10 w-auto object-contain sm:h-12"
           />
-          <span className="hidden sm:block">Aphasia Reverbis</span>
-          <span className="sm:hidden">AR</span>
+
         </Link>
 
         <nav aria-label="Ana navigasyon" className="hidden md:block">
