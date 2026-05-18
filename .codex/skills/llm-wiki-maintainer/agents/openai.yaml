@@ -1,0 +1,3 @@
+display_name: LLM Wiki Maintainer
+short_description: Maintain an Obsidian Markdown wiki from immutable raw sources.
+default_prompt: Use the LLM Wiki Maintainer skill to ingest sources, update wiki pages, maintain index/log files, and keep cross-references healthy.

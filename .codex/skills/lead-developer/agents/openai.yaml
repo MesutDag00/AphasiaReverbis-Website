@@ -1,0 +1,3 @@
+display_name: Lead Developer
+short_description: Senior backend architecture workflow for Laravel/PHP design, implementation, and QA.
+default_prompt: Use the Lead Developer skill to analyze requirements, design the architecture, implement with strict typing and tests, and call out risks before coding.
