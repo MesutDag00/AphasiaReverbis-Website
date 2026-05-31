@@ -43,8 +43,13 @@ export default function KvkkPage() {
 
           <h2 className="mb-3 mt-6 text-xl font-semibold">Haklarınız</h2>
           <p className="text-base leading-relaxed text-slate-700">
-            KVKK’nın 11. maddesi kapsamındaki haklarınızı kullanmak için bizimle iletişime geçebilirsiniz. Başvurular,
-            kimlik doğrulaması sonrasında mevzuatta öngörülen sürelerde sonuçlandırılır.
+            KVKK’nın 11. maddesi kapsamındaki haklarınızı kullanmak için bizimle iletişime geçebilirsiniz. Hesap ve
+            veri silme süreci için{" "}
+            <Link href="/hesap-silme" className="font-semibold text-trust-blue hover:underline">
+              Hesap ve Veri Silme
+            </Link>{" "}
+            sayfamıza bakabilirsiniz. Başvurular, kimlik doğrulaması sonrasında mevzuatta öngörülen sürelerde
+            sonuçlandırılır.
           </p>
         </div>
       </Container>

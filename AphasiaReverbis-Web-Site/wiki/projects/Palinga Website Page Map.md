@@ -68,6 +68,18 @@ Cerez politikasi. Teknik cerezler, kullanim amaclari ve tarayici uzerinden cerez
 
 Kaynak: `src/app/cerez-politikasi/page.tsx`
 
+## `/hesap-silme`
+
+Hesap ve veri silme bilgilendirme sayfasi. Uygulama ici silme adimlari, e-posta ile talep kanali (`aphasiareverbis@palingayazilim.com`), silinen/saklanan veri turleri tablosu. App Store / Google Play uyumluluk URL'si olarak kullanilabilir.
+
+Kaynak: `src/app/hesap-silme/page.tsx`
+
+## `/account-deletion`
+
+Ingilizce alias; `/hesap-silme` sayfasina istemci tarafli yonlendirme yapar (statik export).
+
+Kaynak: `src/app/account-deletion/page.tsx`
+
 ## Ortak Layout
 
 Tum route'lar `src/app/layout.tsx` ile `Header`, `PageTransition` ve `Footer` icinde render edilir.

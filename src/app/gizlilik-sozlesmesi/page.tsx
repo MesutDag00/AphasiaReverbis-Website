@@ -40,6 +40,16 @@ export default function PrivacyPolicyPage() {
             Verilerin güvenliği için teknik ve idari tedbirler uygulanır; erişim yetkileri sınırlandırılır ve uygun
             güvenlik kontrolleriyle izlenir.
           </p>
+
+          <h2 className="mb-3 mt-6 text-xl font-semibold">Veri silme</h2>
+          <p className="text-base leading-relaxed text-slate-700">
+            Hesabınızı ve ilişkili verilerinizi nasıl silebileceğinizi, hangi verilerin kalıcı olarak silindiğini ve
+            yasal saklama kapsamındaki kayıtları{" "}
+            <Link href="/hesap-silme" className="font-semibold text-trust-blue hover:underline">
+              Hesap ve Veri Silme
+            </Link>{" "}
+            sayfamızda bulabilirsiniz.
+          </p>
         </div>
       </Container>
     </div>

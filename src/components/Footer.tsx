@@ -72,6 +72,14 @@ export function Footer() {
                   Çerez Politikası
                 </Link>
               </li>
+              <li>
+                <Link
+                  className="text-[15px] font-semibold text-gray-400 transition hover:text-trust-blue"
+                  href="/hesap-silme"
+                >
+                  Hesap ve Veri Silme
+                </Link>
+              </li>
             </ul>
           </div>
 
