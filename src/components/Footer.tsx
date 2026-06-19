@@ -1,5 +1,6 @@
 import { Container } from "@/components/Container";
 import Link from "next/link";
+import { AppDownloadBadges } from "@/components/AppDownloadBadges";
 
 export function Footer() {
   return (
@@ -10,7 +11,7 @@ export function Footer() {
             <div className="flex flex-row items-center">
               <span className="mr-3 inline-flex h-12 w-14 items-center justify-center overflow-hidden rounded-xl bg-white p-2 shadow-sm">
                 <img
-                  src="/images/palinga-logo.jpeg"
+                  src="/images/Palinga Logo.png"
                   alt="PALINGA Yazılım Logo"
                   className="h-full w-full object-contain"
                 />
@@ -18,8 +19,11 @@ export function Footer() {
               <div className="text-lg font-bold tracking-tight">PALINGA Yazılım A.Ş.</div>
             </div>
             <p className="text-[15px] leading-relaxed text-gray-400">
-              Afazi rehabilitasyonunda teknoloji tabanlı ve erişilebilir dijital çözümler.
+              Afazi rehabilitasyonunda veri odaklı dijital çözümler.
             </p>
+            <div className="pt-2">
+              <AppDownloadBadges />
+            </div>
           </div>
 
           <div className="space-y-4">
@@ -38,6 +42,16 @@ export function Footer() {
               <li>
                 <Link className="text-[15px] font-semibold text-gray-400 transition hover:text-trust-blue" href="/solution">
                   Platformumuz
+                </Link>
+              </li>
+              <li>
+                <Link className="text-[15px] font-semibold text-gray-400 transition hover:text-trust-blue" href="/pricing">
+                  Fiyatlandırma
+                </Link>
+              </li>
+              <li>
+                <Link className="text-[15px] font-semibold text-gray-400 transition hover:text-trust-blue" href="/demo">
+                  İletişime Geç
                 </Link>
               </li>
               <li>
@@ -124,7 +138,9 @@ export function Footer() {
           <span>© 2026 PALINGA Yazılım A.Ş. Tüm hakları saklıdır.</span>
           <div className="flex items-center gap-3">
             <a
-              href="#"
+              href="https://www.linkedin.com/company/palingayazilim/"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex h-10 w-10 items-center justify-center rounded-2xl bg-white/5 ring-1 ring-white/10 transition hover:text-trust-blue"
               aria-label="LinkedIn"
             >
@@ -133,7 +149,9 @@ export function Footer() {
               </svg>
             </a>
             <a
-              href="#"
+              href="https://www.instagram.com/aphasiareverbis/"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex h-10 w-10 items-center justify-center rounded-2xl bg-white/5 ring-1 ring-white/10 transition hover:text-trust-blue"
               aria-label="Instagram"
             >

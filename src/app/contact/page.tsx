@@ -105,8 +105,15 @@ export default function ContactPage() {
                 <div className="absolute left-[48%] top-[52%] h-16 w-24 rounded-[999px] border border-slate-400/25 bg-white/10" />
               </div>
               <div className="absolute inset-0 grid place-items-center">
-                <div className="rounded-full bg-white/80 px-4 py-2 text-sm font-semibold text-slate-700 ring-1 ring-white/70 shadow-soft-sm backdrop-blur">
-                  İstanbul Harita Placeholder
+                <div className="flex flex-col items-center gap-2">
+                  <span className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-trust-blue text-white shadow-soft">
+                    <svg aria-hidden="true" viewBox="0 0 24 24" className="h-5 w-5" fill="currentColor">
+                      <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                    </svg>
+                  </span>
+                  <div className="rounded-full bg-white/90 px-4 py-1.5 text-sm font-semibold text-slate-700 ring-1 ring-white/70 shadow-soft-sm backdrop-blur">
+                    Sarıyer / İstanbul
+                  </div>
                 </div>
               </div>
             </div>

@@ -1,5 +1,6 @@
 import { Container } from "@/components/Container";
 import { Icon, HomeIcon, MapPinIcon } from "@/components/Icons";
+import { PlaceholderImage } from "@/components/PlaceholderImage";
 import Image from "next/image";
 
 type TeamMember = {
@@ -67,6 +68,12 @@ export default function AboutPage() {
           </p>
         </div>
 
+        <PlaceholderImage
+          label="Ekip fotoğrafı"
+          aspectRatio="21/9"
+          className="mt-8"
+        />
+
         <section aria-label="Vizyon ve Misyon" className="mt-10">
           <div className="grid gap-6 lg:grid-cols-2">
             <div className="relative overflow-hidden rounded-3xl bg-white p-8 ring-1 ring-soft-line shadow-soft-sm">
@@ -115,7 +122,7 @@ export default function AboutPage() {
               >
                 <div className="flex items-start justify-between gap-3">
                   <div className="relative">
-                    <div className="relative h-16 w-16 overflow-hidden rounded-full ring-1 ring-soft-line bg-[radial-gradient(120%_120%_at_30%_20%,rgba(0,82,204,0.16),rgba(0,163,191,0.10),transparent_70%)]">
+                    <div className="relative h-20 w-20 overflow-hidden rounded-full ring-1 ring-soft-line bg-[radial-gradient(120%_120%_at_30%_20%,rgba(0,82,204,0.16),rgba(0,163,191,0.10),transparent_70%)]">
                       {m.imageSrc ? (
                         <Image
                           src={m.imageSrc}
@@ -152,10 +159,6 @@ export default function AboutPage() {
                   <div className="text-lg font-bold text-ink-black">{m.name}</div>
                   <div className="mt-1 text-sm font-semibold text-slate-500">{m.title}</div>
                 </div>
-
-                <p className="mt-3 text-[15px] font-medium leading-relaxed text-slate-600">
-                  {m.bio}
-                </p>
 
                 <div className="mt-4 flex flex-wrap gap-2">
                   {m.skills.map((s) => (
@@ -204,6 +207,11 @@ export default function AboutPage() {
                   <MapPinIcon />
                   <span>4. Levent, İstanbul - Teknoloji Geliştirme Bölgesi</span>
                 </div>
+                <PlaceholderImage
+                  label="Ofis / çalışma alanı fotoğrafı"
+                  aspectRatio="16/9"
+                  className="mt-6"
+                />
               </div>
             </div>
           </div>

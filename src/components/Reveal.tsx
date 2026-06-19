@@ -6,9 +6,11 @@ import { cn } from "@/lib/cn";
 export function Reveal({
   className,
   children,
+  delay = 0,
 }: {
   className?: string;
   children: React.ReactNode;
+  delay?: number;
 }) {
   const ref = useRef<HTMLDivElement | null>(null);
   const [visible, setVisible] = useState(false);
@@ -35,7 +37,11 @@ export function Reveal({
   }, []);
 
   return (
-    <div ref={ref} className={cn("reveal", visible && "is-visible", className)}>
+    <div
+      ref={ref}
+      style={delay > 0 ? { transitionDelay: `${delay}ms` } : undefined}
+      className={cn("reveal", visible && "is-visible", className)}
+    >
       {children}
     </div>
   );
