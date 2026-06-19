@@ -34,7 +34,7 @@ export default function AccountDeletionPage() {
             1. Uygulama içinden hesabınızı silme
           </h2>
           <p className="text-base leading-relaxed text-slate-700">
-            Hesabınızı doğrudan uygulama üzerinden kalıcı olarak silebilirsiniz. Adımlar hem hasta/kullanıcı
+            Hesabınızı doğrudan uygulama üzerinden kalıcı olarak silebilirsiniz. Adımlar hem danışan/kullanıcı
             hem terapist hesapları için aynıdır:
           </p>
           <ol className="mt-4 list-decimal space-y-2 pl-5 text-base leading-relaxed text-slate-700">

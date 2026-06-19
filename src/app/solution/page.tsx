@@ -63,7 +63,7 @@ export default function SolutionPage() {
             <span className="text-trust-blue">tam ekosistem</span>
           </h1>
           <p className="mt-3 text-base text-soft-gray">
-            Hasta evde çalışır, terapist her adımı görür.
+            Danışan evde çalışır, terapist her adımı görür.
           </p>
         </div>
 
@@ -285,7 +285,7 @@ export default function SolutionPage() {
               <div className="badge mb-3 inline-flex">Veri Odaklı Raporlama</div>
               <h2 className="text-3xl font-bold text-ink-black sm:text-4xl">8 Boyutlu İlerleme Analizi</h2>
               <p className="mt-3 text-soft-gray">
-                Her hasta için kapsamlı veri görselleştirme; terapist tek ekranda tüm gelişimi takip eder
+                Her danışan için kapsamlı veri görselleştirme; terapist tek ekranda tüm gelişimi takip eder
               </p>
             </div>
           </Reveal>
@@ -336,7 +336,7 @@ export default function SolutionPage() {
               {
                 panel: "PDF",
                 title: "Otomatik Rapor",
-                desc: "Tüm panelleri tek tıkla PDF raporuna dönüştür; hastaya veya kuruma ilet",
+                desc: "Tüm panelleri tek tıkla PDF raporuna dönüştür; danışana veya kuruma ilet",
                 tone: "bg-ink-black/5 text-ink-black ring-soft-line",
               },
             ].map(({ panel, title, desc, tone }) => (
@@ -377,7 +377,7 @@ export default function SolutionPage() {
               {
                 icon: <UsersIcon />,
                 title: "Rol Tabanlı Erişim",
-                desc: "Her kullanıcı yalnızca kendi yetkisindeki verilere erişebilir. Terapist, yönetici ve hasta rolleri ayrıdır.",
+                desc: "Her kullanıcı yalnızca kendi yetkisindeki verilere erişebilir. Terapist, yönetici ve danışan rolleri ayrıdır.",
               },
               {
                 icon: <ClipboardListIcon />,

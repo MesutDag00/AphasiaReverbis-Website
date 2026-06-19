@@ -22,7 +22,7 @@ export default function Home() {
                 Süreç Yönetimi
               </h1>
               <p className="fade-in-up max-w-xl text-lg text-soft-gray" style={{ animationDelay: "100ms" }}>
-                Terapistler için gerçek zamanlı ilerleme takibi; hastalar için güdüleyici ev egzersizi deneyimi — TÜBİTAK destekli tek ekosistemde.
+                Terapistler için gerçek zamanlı ilerleme takibi; danışanlar için güdüleyici ev egzersizi deneyimi — TÜBİTAK destekli tek ekosistemde.
               </p>
               <div className="fade-in-up flex flex-col gap-3 sm:flex-row" style={{ animationDelay: "160ms" }}>
                 <ButtonLink href="/solution" variant="primary" className="w-full sm:w-auto">Platformu Keşfet</ButtonLink>
@@ -99,7 +99,7 @@ export default function Home() {
             <div className="pointer-events-none absolute left-[12.5%] right-[12.5%] top-8 hidden h-0.5 bg-gradient-to-r from-trust-blue/30 via-healing-teal/50 to-trust-blue/30 lg:block" aria-hidden="true" />
             <StepCard step={1} title="Terapist Profil Oluşturur" description="Danışan bilgileri ve klinik değerlendirme." icon={<UserCheckIcon />} delay={0} dark />
             <StepCard step={2} title="Kişisel Plan Atanır" description="Kişisel egzersiz planı mobil uygulamaya yüklenir." icon={<ZapIcon />} delay={80} dark />
-            <StepCard step={3} title="Hasta Evde Çalışır" description="Hasta egzersizlerini kendi temposunda tamamlar." icon={<BarChart3Icon />} delay={160} dark />
+            <StepCard step={3} title="Danışan Evde Çalışır" description="Danışan egzersizlerini kendi temposunda tamamlar." icon={<BarChart3Icon />} delay={160} dark />
             <StepCard step={4} title="Terapist Analiz Eder" description="Gerçek zamanlı takip, güncelleme ve raporlama." icon={<ShieldCheckIcon />} delay={240} dark />
           </div>
           <Reveal>
@@ -126,7 +126,7 @@ export default function Home() {
           </Reveal>
           <div className="grid gap-5 sm:grid-cols-3">
             {([
-              { icon: <ClipboardListIcon />, title: "Ev Egzersizi Takibi",      desc: "Hasta uyumu kâğıt notlar veya hafıza ile izleniyor; seans arası gelişim görünmez kalıyor.", blue: true  },
+              { icon: <ClipboardListIcon />, title: "Ev Egzersizi Takibi",      desc: "Danışan uyumu kâğıt notlar veya hafıza ile izleniyor; seans arası gelişim görünmez kalıyor.", blue: true  },
               { icon: <BarChart3Icon />,     title: "İdari Raporlama Yükü",    desc: "Seans notları ve raporlama terapistin klinik zamanını tüketiyor.",                           blue: false },
               { icon: <UsersIcon />,         title: "Aile Sürece Dahil Değil", desc: "Yakınlar için standart rehberlik yok; terapist anlatıyor, aile unutuyor.",                  blue: true  },
             ] as { icon: React.ReactNode; title: string; desc: string; blue: boolean }[]).map(({ icon, title, desc, blue }, i) => (

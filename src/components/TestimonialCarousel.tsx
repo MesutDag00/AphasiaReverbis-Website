@@ -14,10 +14,10 @@ const slides = [
   },
   {
     image: "/images/Therapsit/Hasta-1.png",
-    badge: "Hasta Deneyimi",
+    badge: "Danışan Deneyimi",
     quote:
       "Her gün ne yapacağımı biliyorum. Terapistim egzersizlerimi takip ediyor, bu beni çok motive ediyor.",
-    name: "Afazi Rehabilitasyon Hastası",
+    name: "Afazi Rehabilitasyon Danışanı",
     location: "Ev Programı Katılımcısı",
   },
 ];

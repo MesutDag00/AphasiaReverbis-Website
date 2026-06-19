@@ -12,11 +12,11 @@ const categories = [
     items: [
       {
         q: "Aphasia Reverbis nedir?",
-        a: "Aphasia Reverbis, afazi tanısı almış bireylerin dil-konuşma terapisi süreçlerini dijitalleştiren, terapist kontrollü ve veri odaklı bir rehabilitasyon platformudur. Mobil uygulama (hasta tarafı) ve web tabanlı terapist panelinden oluşur.",
+        a: "Aphasia Reverbis, afazi tanısı almış bireylerin dil-konuşma terapisi süreçlerini dijitalleştiren, terapist kontrollü ve veri odaklı bir rehabilitasyon platformudur. Mobil uygulama (danışan tarafı) ve web tabanlı terapist panelinden oluşur.",
       },
       {
         q: "Kimler kullanabilir?",
-        a: "Platform; dil ve konuşma terapistleri, rehabilitasyon klinikleri, hastaneler ve afazi hastalarının bireysel veya kurumsal kullanımına yöneliktir. Hasta yakınları da aile katılım modülü aracılığıyla sürece dahil olabilir.",
+        a: "Platform; dil ve konuşma terapistleri, rehabilitasyon klinikleri, hastaneler ve afazi danışanlarının bireysel veya kurumsal kullanımına yöneliktir. Danışan yakınları da aile katılım modülü aracılığıyla sürece dahil olabilir.",
       },
       {
         q: "TÜBİTAK desteği ne anlama geliyor?",
@@ -37,7 +37,7 @@ const categories = [
     items: [
       {
         q: "Platform mobil mi, web tabanlı mı?",
-        a: "Her ikisi de. Hasta tarafı iOS ve Android mobil uygulaması üzerinden çalışır. Terapist paneli ise web tarayıcısı üzerinden erişilebilir; ek bir yazılım kurulumu gerekmez.",
+        a: "Her ikisi de. Danışan tarafı iOS ve Android mobil uygulaması üzerinden çalışır. Terapist paneli ise web tarayıcısı üzerinden erişilebilir; ek bir yazılım kurulumu gerekmez.",
       },
       {
         q: "Mobil uygulama internet bağlantısı olmadan çalışır mı?",
@@ -52,7 +52,7 @@ const categories = [
         a: "Bu, seçilen plan tipine göre değişir. Bireysel Terapist planında 15 danışan, Klinik planında 100 danışan kapasitesi mevcuttur. Kurumsal planda sınır yoktur.",
       },
       {
-        q: "Terapist ve hasta arasında gerçek zamanlı iletişim var mı?",
+        q: "Terapist ve danışan arasında gerçek zamanlı iletişim var mı?",
         a: "Mevcut sürümde terapist, danışanın egzersiz verilerini ve ilerleme raporlarını gerçek zamanlı izleyebilir. Doğrudan mesajlaşma özelliği yol haritamızdaki bir sonraki büyük güncellemede yer almaktadır.",
       },
     ],
@@ -111,8 +111,8 @@ const categories = [
         a: "API erişimi yalnızca Kurumsal plan kapsamında sunulmaktadır. Endpoint dokümantasyonu ve sandbox ortamı ilgili ekibimizle paylaşılmaktadır.",
       },
       {
-        q: "Mevcut hasta veritabanını aktarabilir miyim?",
-        a: "Evet. Kurumsal onboarding sürecinde standart formatlardaki (CSV, FHIR) hasta verilerinin platform veritabanına aktarılması için teknik destek sağlanmaktadır.",
+        q: "Mevcut danışan veritabanını aktarabilir miyim?",
+        a: "Evet. Kurumsal onboarding sürecinde standart formatlardaki (CSV, FHIR) danışan verilerinin platform veritabanına aktarılması için teknik destek sağlanmaktadır.",
       },
     ],
   },

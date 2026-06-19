@@ -88,32 +88,6 @@ export default function DemoPage() {
                 </div>
               </a>
 
-              {/* Admin Girişi */}
-              <a
-                href="http://89.45.45.31/admin"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="card card-hover flex items-start gap-4 p-6 no-underline"
-              >
-                <span className="inline-flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-trust-blue/10 text-trust-blue ring-1 ring-trust-blue/20">
-                  <svg aria-hidden="true" viewBox="0 0 24 24" className="h-6 w-6" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <rect x="3" y="11" width="18" height="11" rx="2" />
-                    <path d="M7 11V7a5 5 0 0 1 10 0v4" />
-                  </svg>
-                </span>
-                <div>
-                  <div className="text-sm font-semibold text-soft-gray">Admin Paneli</div>
-                  <div className="mt-1 text-base font-bold text-ink-black">Terapist / Yönetici Girişi</div>
-                  <div className="mt-1 text-sm text-soft-gray flex items-center gap-1">
-                    Panele erişmek için tıklayın
-                    <svg aria-hidden="true" viewBox="0 0 24 24" className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                      <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
-                      <polyline points="15 3 21 3 21 9" />
-                      <line x1="10" y1="14" x2="21" y2="3" />
-                    </svg>
-                  </div>
-                </div>
-              </a>
             </div>
           </div>
         </Container>

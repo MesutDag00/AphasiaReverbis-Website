@@ -41,15 +41,6 @@ export function Header() {
               </li>
             ))}
           </ul>
-          <ButtonLink
-            href="http://89.45.45.31/admin"
-            variant="ghost"
-            className="ml-2 text-sm"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Giriş Yap
-          </ButtonLink>
           <ButtonLink href="/demo" variant="primary" className="ml-1 text-sm">
             İletişime Geç
           </ButtonLink>
@@ -75,15 +66,6 @@ export function Header() {
               </ul>
             </nav>
             <div className="mt-3 border-t border-soft-line pt-3 flex flex-col gap-2">
-              <ButtonLink
-                href="http://89.45.45.31/admin"
-                variant="ghost"
-                className="w-full justify-center"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Giriş Yap
-              </ButtonLink>
               <ButtonLink href="/demo" variant="primary" className="w-full justify-center">
                 İletişime Geç
               </ButtonLink>
