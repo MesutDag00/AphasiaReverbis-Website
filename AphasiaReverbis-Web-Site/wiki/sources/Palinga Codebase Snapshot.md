@@ -1,6 +1,6 @@
 # Palinga Codebase Snapshot
 
-Source scope: `C:\Users\mst\Palinga-web-site`
+Source scope: `C:\Users\mst\AphasiaReverbis-Web-Site`
 
 Snapshot date: 2026-05-11
 
@@ -15,7 +15,7 @@ This source summary records the current technical scan of the Palinga Website co
 - Shared UI components under `src/components/`
 - Utility code under `src/lib/`
 - Public assets under `public/`
-- Obsidian/wiki setup under `Palinga-Web-Site/`
+- Obsidian/wiki setup under `AphasiaReverbis-Web-Site/`
 
 ## Durable Findings
 

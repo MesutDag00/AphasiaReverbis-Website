@@ -9,10 +9,10 @@ Use this skill to maintain a persistent, compounding Markdown wiki. The raw sour
 
 ## Local Layout
 
-- Raw sources: `Palinga-Web-Site/raw/`
-- Wiki pages: `Palinga-Web-Site/wiki/`
-- Main index: `Palinga-Web-Site/wiki/index.md`
-- Chronological log: `Palinga-Web-Site/wiki/log.md`
+- Raw sources: `AphasiaReverbis-Web-Site/raw/`
+- Wiki pages: `AphasiaReverbis-Web-Site/wiki/`
+- Main index: `AphasiaReverbis-Web-Site/wiki/index.md`
+- Chronological log: `AphasiaReverbis-Web-Site/wiki/log.md`
 
 ## Core Rules
 

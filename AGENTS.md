@@ -7,10 +7,10 @@ This project has two persistent operating modes:
 
 ## Obsidian Vault
 
-The project-local Obsidian vault is `Palinga-Web-Site/`.
+The project-local Obsidian vault is `AphasiaReverbis-Web-Site/`.
 
-Treat `Palinga-Web-Site/raw/` as immutable source material. Read from it, cite it, and copy new source files into it when the user asks to preserve sources, but do not rewrite source files unless explicitly requested.
+Treat `AphasiaReverbis-Web-Site/raw/` as immutable source material. Read from it, cite it, and copy new source files into it when the user asks to preserve sources, but do not rewrite source files unless explicitly requested.
 
-Treat `Palinga-Web-Site/wiki/` as the LLM-maintained knowledge layer. Update pages, links, summaries, contradictions, and indexes there as knowledge evolves.
+Treat `AphasiaReverbis-Web-Site/wiki/` as the LLM-maintained knowledge layer. Update pages, links, summaries, contradictions, and indexes there as knowledge evolves.
 
-Read `Palinga-Web-Site/wiki/index.md` before answering wiki-oriented questions, then open the relevant linked pages. Append operations to `Palinga-Web-Site/wiki/log.md` using a consistent dated heading.
+Read `AphasiaReverbis-Web-Site/wiki/index.md` before answering wiki-oriented questions, then open the relevant linked pages. Append operations to `AphasiaReverbis-Web-Site/wiki/log.md` using a consistent dated heading.
