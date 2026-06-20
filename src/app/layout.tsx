@@ -16,7 +16,7 @@ const inter = Inter({
 const SITE_URL = "https://aphasiareverbis.com";
 const DEFAULT_TITLE = "Aphasia Reverbis | Terapist Kontrollü Dijital Afazi Rehabilitasyonu";
 const DEFAULT_DESCRIPTION =
-  "Afazi rehabilitasyonunu dijitalleştiren terapist kontrollü platform: danışanlar için 24 bilimsel aktivite içeren mobil uygulama, terapistler için 8 boyutlu analiz paneliyle gerçek zamanlı ilerleme takibi. TÜBİTAK destekli, KVKK uyumlu, veri odaklı.";
+  "TÜBİTAK destekli dijital afazi rehabilitasyon platformu. Terapistler için 8 boyutlu analiz paneli ve gerçek zamanlı takip; danışanlar için 24 bilimsel aktivite içeren mobil uygulama. KVKK uyumlu.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
