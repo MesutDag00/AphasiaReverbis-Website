@@ -45,6 +45,9 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/",
   },
+  verification: {
+    google: "SQjyyo_alB67dweCc7zzLmTIUFlPYCwdozP92PJgdLA",
+  },
   icons: {
     apple: [{ url: "/apple-icon.png", sizes: "180x180", type: "image/png" }],
   },
