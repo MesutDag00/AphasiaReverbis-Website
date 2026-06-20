@@ -11,12 +11,7 @@ import sharp from "sharp";
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const root = resolve(__dirname, "..");
 
-// Marka renkleri (design token'larla aynı)
-const TRUST_BLUE = "#0052CC";
-const HEALING_TEAL = "#00A3BF";
-const INK = "#0B1220";
-
-// 1) Wordmark PNG'yi SVG'den çıkar
+// 1) Wordmark PNG'yi SVG'den çıkar (logo-512 ve apple-icon için)
 const svg = readFileSync(resolve(root, "public/images/AphasiaReverbisLogo.svg"), "utf8");
 const m = svg.match(/data:image\/png;base64,([A-Za-z0-9+/=]+)/);
 if (!m) {
@@ -31,47 +26,13 @@ const logoMeta = await sharp(logoTrimmed).metadata();
 console.log(`Trimlenmiş logo: ${logoMeta.width}x${logoMeta.height}`);
 
 // ── Çıktı 1: public/og-cover.png (1200×630) ──
+// Kaynak: public/images/og-source.png (cihaz mockup'lı marka görseli).
+// 1.90 ≈ 1.91 oran olduğundan cover ile kırpma neredeyse yok.
 const OG_W = 1200;
 const OG_H = 630;
-
-// Logoyu OG kartına sığdır: maks genişlik 760px, maks yükseklik 300px
-const ogLogoMaxW = 760;
-const ogLogoMaxH = 300;
-const ogLogo = await sharp(logoTrimmed)
-  .resize(ogLogoMaxW, ogLogoMaxH, { fit: "inside", withoutEnlargement: true })
-  .toBuffer();
-const ogLogoMeta = await sharp(ogLogo).metadata();
-const ogLogoLeft = Math.round((OG_W - ogLogoMeta.width) / 2);
-const ogLogoTop = Math.round(OG_H / 2 - ogLogoMeta.height / 2 - 40);
-
-const ogBackground = Buffer.from(`
-<svg width="${OG_W}" height="${OG_H}" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#eef4ff"/>
-    </linearGradient>
-    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%" stop-color="${TRUST_BLUE}"/>
-      <stop offset="100%" stop-color="${HEALING_TEAL}"/>
-    </linearGradient>
-  </defs>
-  <rect width="${OG_W}" height="${OG_H}" fill="url(#bg)"/>
-  <rect x="0" y="0" width="${OG_W}" height="8" fill="url(#accent)"/>
-  <rect x="0" y="${OG_H - 8}" width="${OG_W}" height="8" fill="url(#accent)"/>
-  <text x="${OG_W / 2}" y="${OG_H - 120}" text-anchor="middle"
-        font-family="Inter, Arial, sans-serif" font-size="38" font-weight="700" fill="${INK}">
-    Terapist Kontrollü Dijital Afazi Rehabilitasyonu
-  </text>
-  <text x="${OG_W / 2}" y="${OG_H - 70}" text-anchor="middle"
-        font-family="Inter, Arial, sans-serif" font-size="26" font-weight="500" fill="${TRUST_BLUE}">
-    TÜBİTAK Destekli · KVKK Uyumlu · Veri Odaklı Takip
-  </text>
-</svg>`);
-
-await sharp(ogBackground)
-  .composite([{ input: ogLogo, left: ogLogoLeft, top: ogLogoTop }])
-  .png()
+await sharp(resolve(root, "public/images/og-source.png"))
+  .resize(OG_W, OG_H, { fit: "cover", position: "centre" })
+  .png({ quality: 90 })
   .toFile(resolve(root, "public/og-cover.png"));
 console.log("✓ public/og-cover.png (1200×630)");
 
