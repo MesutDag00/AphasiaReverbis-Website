@@ -2,7 +2,7 @@
 // Server component — Google'a yapılandırılmış (JSON-LD) kurumsal veri sağlar.
 // Bu, arama sonucundaki "yüzeysel/eksik bilgi" sorununun asıl çözümüdür.
 
-const SITE_URL = "https://www.aphasiareverbis.com";
+const SITE_URL = "https://aphasiareverbis.com";
 
 /** JSON-LD'yi XSS'e karşı güvenli biçimde gömer (</script> ve < kaçışı). */
 function JsonLd({ data }: { data: Record<string, unknown> }) {
