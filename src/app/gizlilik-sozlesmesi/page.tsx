@@ -1,5 +1,13 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { Container } from "@/components/Container";
+
+export const metadata: Metadata = {
+  title: "Gizlilik Sözleşmesi",
+  description:
+    "Aphasia Reverbis gizlilik sözleşmesi: kişisel ve sağlık verilerinizin nasıl toplandığı, işlendiği, saklandığı ve korunduğuna dair açıklamalar.",
+  alternates: { canonical: "/gizlilik-sozlesmesi" },
+};
 
 export default function PrivacyPolicyPage() {
   return (

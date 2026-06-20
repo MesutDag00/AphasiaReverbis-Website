@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { Container } from "@/components/Container";
-import { ButtonLink } from "@/components/Button";
+import { Button } from "@/components/Button";
 
 const nav = [
   { href: "/", label: "Ana Sayfa" },
@@ -41,9 +41,9 @@ export function Header() {
               </li>
             ))}
           </ul>
-          <ButtonLink href="/demo" variant="primary" className="ml-1 text-sm">
-            İletişime Geç
-          </ButtonLink>
+          <Button variant="primary" className="text-sm">
+            Giriş Yap
+          </Button>
         </nav>
 
         <details className="md:hidden">
@@ -65,10 +65,10 @@ export function Header() {
                 ))}
               </ul>
             </nav>
-            <div className="mt-3 border-t border-soft-line pt-3 flex flex-col gap-2">
-              <ButtonLink href="/demo" variant="primary" className="w-full justify-center">
-                İletişime Geç
-              </ButtonLink>
+            <div className="mt-3 border-t border-soft-line pt-3">
+              <Button variant="primary" className="w-full justify-center">
+                Giriş Yap
+              </Button>
             </div>
           </div>
         </details>

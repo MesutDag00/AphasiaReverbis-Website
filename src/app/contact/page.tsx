@@ -1,4 +1,17 @@
+import type { Metadata } from "next";
 import { Container } from "@/components/Container";
+
+export const metadata: Metadata = {
+  title: "İletişim",
+  description:
+    "Aphasia Reverbis ekibiyle iletişime geçin. Klinik iş birlikleri, pilot çalışmalar ve sorularınız için e-posta ve telefon kanallarımız.",
+  alternates: { canonical: "/contact" },
+  openGraph: {
+    title: "İletişim — Aphasia Reverbis",
+    description: "Klinik iş birlikleri ve pilot çalışmalar için bizimle iletişime geçin.",
+    url: "/contact",
+  },
+};
 
 export default function ContactPage() {
   return (
@@ -43,7 +56,7 @@ export default function ContactPage() {
 
           <a
             aria-label="E-posta gönder"
-            href="mailto:palingayazilim@gmail.com"
+            href="mailto:aphasiareverbis@palingayazilim.com"
             className="group block rounded-2xl bg-slate-50 p-10 ring-1 ring-soft-line shadow-soft-sm transition hover:-translate-y-1 hover:shadow-xl"
           >
             <div className="mx-auto grid max-w-2xl gap-6 text-center">
@@ -57,7 +70,7 @@ export default function ContactPage() {
               <div>
                 <div className="text-sm font-semibold text-slate-500">E-Posta</div>
                 <div className="mt-2 break-all text-2xl font-semibold tracking-tight text-ink-black sm:text-3xl">
-                  palingayazilim@gmail.com
+                  aphasiareverbis@palingayazilim.com
                 </div>
                 <div className="mt-4 inline-flex items-center justify-center rounded-full bg-white px-4 py-2 text-base font-semibold text-slate-600 ring-1 ring-soft-line">
                   24 saat içinde dönüş hedefi

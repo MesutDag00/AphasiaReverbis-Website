@@ -3,10 +3,10 @@ import Link from "next/link";
 import { Container } from "@/components/Container";
 
 export const metadata: Metadata = {
-  title: "Hesap ve Veri Silme | Aphasia Reverbis",
+  title: "Hesap ve Veri Silme",
   description:
-    "Aphasia Reverbis hesabınızı ve ilişkili verilerinizi nasıl silebileceğinizi öğrenin.",
-  robots: "index, follow",
+    "Aphasia Reverbis hesabınızı ve ilişkili kişisel verilerinizi KVKK 'Unutulma Hakkı' kapsamında nasıl silebileceğinizi öğrenin.",
+  alternates: { canonical: "/hesap-silme" },
 };
 
 export default function AccountDeletionPage() {

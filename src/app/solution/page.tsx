@@ -9,9 +9,28 @@ import {
   ShieldCheckIcon,
   LockIcon,
   ClipboardListIcon,
+  CheckIcon,
 } from "@/components/Icons";
-import { ButtonLink } from "@/components/Button";
 import { Reveal } from "@/components/Reveal";
+import { PhoneCarousel } from "@/components/PhoneCarousel";
+import { ScrollIndicator } from "@/components/ScrollIndicator";
+import { SolutionScrollWrapper } from "@/components/SolutionScrollWrapper";
+import { Footer } from "@/components/Footer";
+import { AppDownloadBadges } from "@/components/AppDownloadBadges";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Platform",
+  description:
+    "Danışanlar için 24 bilimsel aktivite içeren mobil uygulama, terapistler için 8 boyutlu analiz paneliyle gerçek zamanlı ilerleme takibi. Terapist kontrollü, KVKK uyumlu, veri odaklı afazi rehabilitasyon platformu.",
+  alternates: { canonical: "/solution" },
+  openGraph: {
+    title: "Platform — Aphasia Reverbis",
+    description:
+      "24 bilimsel aktivite, 8 boyutlu analiz paneli ve terapist kontrollü ev egzersizi ekosistemi.",
+    url: "/solution",
+  },
+};
 
 const CATEGORY_STYLES = {
   "trust-blue":   "bg-trust-blue/10 text-trust-blue ring-trust-blue/20",
@@ -52,135 +71,102 @@ function Feature({
 
 export default function SolutionPage() {
   return (
-    <div className="bg-clean-white">
-      <Container className="pt-12 pb-8 sm:pt-14 sm:pb-10">
-        <div className="max-w-xl">
-          <div className="mb-4 inline-flex items-center gap-2 rounded-full bg-trust-blue/8 px-3 py-1.5 text-sm font-semibold text-trust-blue ring-1 ring-trust-blue/20">
-            Platform
-          </div>
-          <h1 className="text-balance text-3xl font-bold leading-tight text-ink-black sm:text-4xl">
-            Afazi terapisi için{" "}
-            <span className="text-trust-blue">tam ekosistem</span>
-          </h1>
-          <p className="mt-3 text-base text-soft-gray">
-            Danışan evde çalışır, terapist her adımı görür.
-          </p>
-        </div>
-
-        <div className="mt-8 grid gap-5 lg:grid-cols-2">
-
-          {/* ── Danışan & Aile ── */}
-          <Reveal className="h-full">
-            <div className="relative flex h-full flex-col overflow-hidden rounded-3xl bg-gradient-to-b from-white to-healing-teal/5 p-5 ring-1 ring-soft-line/60">
-              <div className="pointer-events-none absolute right-0 top-0 h-40 w-40 rounded-full bg-[radial-gradient(circle,rgba(0,163,191,0.12),transparent_70%)]" />
-
-              <div className="self-start inline-flex items-center gap-2 rounded-full bg-healing-teal/10 px-3 py-1 text-xs font-semibold text-healing-teal ring-1 ring-healing-teal/20">
-                Danışan &amp; Aile
-              </div>
-              <h2 id="hasta-aile" className="mt-2.5 text-base font-bold text-ink-black">
-                Evde Sürdürülebilir Rehabilitasyon
-              </h2>
-
-              {/* Mobil uygulama mockup */}
-              <div className="mt-3 flex flex-1 flex-col overflow-hidden rounded-2xl bg-white ring-1 ring-soft-line/50">
-                <div className="flex items-center justify-between border-b border-soft-line/40 px-4 py-2">
-                  <span className="text-xs font-semibold text-ink-black">Bugünün Programı</span>
-                  <span className="inline-flex items-center gap-1 rounded-full bg-healing-teal/10 px-2 py-0.5 text-xs font-semibold text-healing-teal">
-                    2 / 3 tamamlandı
-                  </span>
+    <SolutionScrollWrapper>
+      {/* ── Bölüm A: Danışan ── */}
+      <section aria-label="Danışan perspektifi" className="relative bg-clean-white flex items-center min-h-[calc(100dvh-4rem)]" style={{ scrollSnapAlign: 'start' }}>
+        <Container className="py-12">
+          <div className="grid items-center gap-16 lg:grid-cols-[50fr_50fr]">
+            {/* Metin */}
+            <Reveal>
+              <div className="space-y-7">
+                <div className="inline-flex items-center gap-2 rounded-full bg-trust-blue/10 px-4 py-2 text-sm font-semibold text-trust-blue ring-1 ring-trust-blue/20">
+                  Danışan &amp; Aile
                 </div>
-
-                <div className="flex-1 divide-y divide-soft-line/30 px-3">
+                <h2 className="text-balance text-4xl font-bold text-ink-black sm:text-5xl">
+                  Ev Konforunda{" "}
+                  <span className="text-trust-blue">Profesyonel Terapi</span>
+                </h2>
+                <p className="text-lg leading-relaxed text-soft-gray">
+                  Danışan kendi temposunda çalışır, aile de sürece dahil olur. Güdüleyici arayüz egzersiz uyumunu artırır.
+                </p>
+                <ul className="space-y-4">
                   {[
-                    { name: "Görsel Adlandırma", done: true  },
-                    { name: "Kademeli İpucu",    done: true  },
-                    { name: "Bellek Tekrarı",    done: false },
-                  ].map(({ name, done }) => (
-                    <div key={name} className="flex items-center gap-3 py-2.5">
-                      <span className={`inline-flex h-6 w-6 shrink-0 items-center justify-center rounded-full ring-1 ${done ? "bg-healing-teal/10 text-healing-teal ring-healing-teal/20" : "bg-slate-100 text-slate-400 ring-slate-200"}`}>
-                        {done ? (
-                          <svg viewBox="0 0 24 24" className="h-3 w-3" fill="none" stroke="currentColor" strokeWidth="3" aria-hidden="true"><path d="M20 6 9 17l-5-5" /></svg>
-                        ) : (
-                          <svg viewBox="0 0 24 24" className="h-3 w-3" fill="none" stroke="currentColor" strokeWidth="2.5" aria-hidden="true"><circle cx="12" cy="12" r="9" /><path d="M12 8v4l2 2" /></svg>
-                        )}
+                    "Kişiselleştirilmiş günlük program",
+                    "Aile rehberlik modülü",
+                    "%94 egzersiz uyum oranı (pilot)",
+                  ].map((item) => (
+                    <li key={item} className="flex items-center gap-3">
+                      <span className="inline-flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-trust-blue/10 text-trust-blue">
+                        <CheckIcon />
                       </span>
-                      <span className={`flex-1 text-sm font-semibold leading-tight ${done ? "text-slate-400 line-through" : "text-ink-black"}`}>{name}</span>
-                      {!done && (
-                        <span className="shrink-0 rounded-full bg-healing-teal/12 px-2.5 py-0.5 text-xs font-semibold text-healing-teal ring-1 ring-healing-teal/25">Başla</span>
-                      )}
-                    </div>
+                      <span className="text-base font-semibold text-ink-black">{item}</span>
+                    </li>
                   ))}
-                </div>
-
-                <div className="border-t border-soft-line/40 bg-slate-50/60 px-4 py-2.5">
-                  <div className="mb-1.5 flex items-center justify-between">
-                    <span className="text-xs font-semibold text-soft-gray">Günlük hedef</span>
-                    <span className="text-xs font-semibold text-healing-teal">%66</span>
-                  </div>
-                  <div className="h-1.5 overflow-hidden rounded-full bg-slate-100">
-                    <div className="h-1.5 rounded-full bg-gradient-to-r from-healing-teal to-healing-teal/50" style={{ width: "66%" }} />
-                  </div>
-                </div>
+                </ul>
+                <AppDownloadBadges theme="light" />
               </div>
-            </div>
-          </Reveal>
+            </Reveal>
 
-          {/* ── Terapist ── */}
-          <Reveal delay={80} className="h-full">
-            <div className="relative flex h-full flex-col overflow-hidden rounded-3xl bg-gradient-to-b from-white to-trust-blue/5 p-5 ring-1 ring-soft-line/60">
-              <div className="pointer-events-none absolute right-0 top-0 h-40 w-40 rounded-full bg-[radial-gradient(circle,rgba(0,82,204,0.12),transparent_70%)]" />
-
-              <div className="self-start inline-flex items-center gap-2 rounded-full bg-trust-blue/10 px-3 py-1 text-xs font-semibold text-trust-blue ring-1 ring-trust-blue/20">
-                Terapist
+            {/* Görsel — otomatik geçişli carousel */}
+            <Reveal delay={80}>
+              <div className="flex justify-center">
+                <PhoneCarousel />
               </div>
-              <h2 id="terapist" className="mt-2.5 text-base font-bold text-ink-black">
-                Veri Odaklı Uzaktan Yönetim
-              </h2>
+            </Reveal>
+          </div>
+        </Container>
 
-              {/* Admin dashboard mockup */}
-              <div className="mt-3 flex-1 overflow-hidden rounded-2xl bg-white ring-1 ring-soft-line/50">
-                <div className="flex items-center justify-between border-b border-soft-line/40 px-4 py-2">
-                  <div className="flex items-center gap-2">
-                    <span className="inline-flex h-6 w-6 items-center justify-center rounded-full bg-trust-blue/10 text-xs font-bold text-trust-blue">AY</span>
-                    <span className="text-xs font-semibold text-ink-black">Ahmet Y.</span>
-                  </div>
-                  <span className="inline-flex items-center gap-1 rounded-full bg-trust-blue/10 px-2 py-0.5 text-xs font-semibold text-trust-blue">
-                    <svg viewBox="0 0 24 24" className="h-3 w-3" fill="none" stroke="currentColor" strokeWidth="2.5" aria-hidden="true"><path d="M3 17l6-6 4 4 7-7" /><path d="M14 8h6v6" /></svg>
-                    Son 7 gün +12%
-                  </span>
+        <ScrollIndicator />
+      </section>
+
+      {/* ── Bölüm B: Terapist — açık arka plan, görsel sol ── */}
+      <section aria-label="Terapist perspektifi" className="bg-[#f4f7fb] flex items-center min-h-[calc(100dvh-4rem)]" style={{ scrollSnapAlign: 'start' }}>
+        <Container className="py-12">
+          <div className="grid items-center gap-16 lg:grid-cols-2">
+            {/* Görsel */}
+            <Reveal>
+              <img
+                src="/images/Therapsit/Therapist.png"
+                alt="Terapist platformu kullanırken"
+                className="block h-auto w-full"
+              />
+            </Reveal>
+
+            {/* Metin */}
+            <Reveal delay={80}>
+              <div className="space-y-7">
+                <div className="inline-flex items-center gap-2 rounded-full bg-healing-teal/10 px-4 py-2 text-sm font-semibold text-healing-teal ring-1 ring-healing-teal/20">
+                  Terapist
                 </div>
-
-                <div className="space-y-3 px-4 py-3">
+                <h2 className="text-balance text-4xl font-bold text-ink-black sm:text-5xl">
+                  Klinik Gücü,{" "}
+                  <span className="text-healing-teal">Uzaktan Erişim</span>
+                </h2>
+                <p className="text-lg leading-relaxed text-soft-gray">
+                  Terapist her danışanın ev egzersizini gerçek zamanlı izler. Seans başlamadan önce tüm veriye sahip olur.
+                </p>
+                <ul className="space-y-4">
                   {[
-                    { label: "Kelime Bulma", value: 72 },
-                    { label: "Akıcılık",     value: 58 },
-                    { label: "Anlama",       value: 42 },
-                    { label: "Bağımsızlık",  value: 35 },
-                  ].map(({ label, value }) => (
-                    <div key={label} className="flex items-center justify-between gap-3">
-                      <span className="text-xs font-semibold text-slate-600">{label}</span>
-                      <div className="flex shrink-0 items-center gap-1.5">
-                        <div className="h-2 w-28 overflow-hidden rounded-full bg-slate-100">
-                          <div
-                            className="h-2 rounded-full bg-gradient-to-r from-trust-blue to-healing-teal"
-                            style={{ width: `${value}%` }}
-                          />
-                        </div>
-                        <span className="w-7 text-right text-xs font-semibold text-slate-500">{value}%</span>
-                      </div>
-                    </div>
+                    "Gerçek zamanlı egzersiz verisi",
+                    "8 boyutlu ilerleme analizi",
+                    "Otomatik PDF rapor",
+                  ].map((item) => (
+                    <li key={item} className="flex items-center gap-3">
+                      <span className="inline-flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-healing-teal/10 text-healing-teal">
+                        <CheckIcon />
+                      </span>
+                      <span className="text-base font-semibold text-ink-black">{item}</span>
+                    </li>
                   ))}
-                </div>
-
+                </ul>
               </div>
-            </div>
-          </Reveal>
+            </Reveal>
+          </div>
+        </Container>
+      </section>
 
-        </div>
-      </Container>
-
-      <section aria-label="24 Bilimsel Aktivite" className="bg-[#f4f7fb] py-16 sm:py-20">
-        <Container>
+      <section aria-label="24 Bilimsel Aktivite" className="bg-clean-white flex items-center min-h-[calc(100dvh-4rem)]" style={{ scrollSnapAlign: 'start' }}>
+        <Container className="py-12">
           <Reveal>
             <div className="mb-10 text-center">
               <div className="badge mb-3 inline-flex">Kanıt Temelli Egzersizler</div>
@@ -277,9 +263,9 @@ export default function SolutionPage() {
         </Container>
       </section>
 
-      <Container className="py-16 sm:py-20">
-        {/* 8 Analiz Paneli Section */}
-        <section aria-label="8 Boyutlu Analiz">
+      {/* 8 Analiz Paneli Section */}
+      <section aria-label="8 Boyutlu Analiz" className="bg-[#f4f7fb] flex items-center min-h-[calc(100dvh-4rem)]" style={{ scrollSnapAlign: 'start' }}>
+        <Container className="py-12">
           <Reveal>
             <div className="mb-10 text-center">
               <div className="badge mb-3 inline-flex">Veri Odaklı Raporlama</div>
@@ -351,10 +337,12 @@ export default function SolutionPage() {
               </Reveal>
             ))}
           </div>
-        </section>
+        </Container>
+      </section>
 
-        {/* Security Section */}
-        <section aria-label="Güvenlik ve Uyumluluk" className="mt-16">
+      {/* Security Section */}
+      <section aria-label="Güvenlik ve Uyumluluk" className="bg-clean-white flex items-center min-h-[calc(100dvh-4rem)]" style={{ scrollSnapAlign: 'start' }}>
+        <Container className="py-12">
           <Reveal>
             <div className="mb-10 text-center">
               <div className="badge mb-3 inline-flex">Güvenlik & Uyumluluk</div>
@@ -385,8 +373,8 @@ export default function SolutionPage() {
                 desc: "Tüm veri erişimleri ve işlemler zaman damgalı audit log ile kayıt altına alınır.",
               },
             ].map(({ icon, title, desc }) => (
-              <Reveal key={title}>
-                <div className="card p-6">
+              <Reveal key={title} className="h-full">
+                <div className="card h-full p-6">
                   <span className="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-trust-blue/10 text-trust-blue ring-1 ring-trust-blue/20">
                     {icon}
                   </span>
@@ -396,31 +384,10 @@ export default function SolutionPage() {
               </Reveal>
             ))}
           </div>
-        </section>
+        </Container>
+      </section>
 
-        <section aria-label="Partnerlik ve İletişim" className="mt-12">
-          <div className="relative overflow-hidden rounded-3xl bg-trust-blue p-8 shadow-soft ring-1 ring-white/10">
-            <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(900px_circle_at_20%_0%,rgba(255,255,255,0.14),transparent_55%),radial-gradient(800px_circle_at_85%_30%,rgba(0,163,191,0.22),transparent_55%)]" />
-            <div className="pointer-events-none absolute inset-0 rounded-3xl ring-1 ring-white/15" aria-hidden="true" />
-
-            <div className="relative mx-auto flex max-w-3xl flex-col items-center gap-4 text-center">
-              <div className="text-balance text-2xl font-semibold text-white sm:text-3xl">
-                Aphasia Reverbis Teknolojisini Kurumunuzda Deneyimleyin
-              </div>
-              <p className="max-w-2xl text-[15px] font-medium leading-relaxed text-white/80">
-                Rehabilitasyon süreçlerinizi dijitalleştirmek ve platform ortağımız olmak için bizimle iletişime geçin.
-              </p>
-              <ButtonLink
-                href="/demo"
-                variant="secondary"
-                className="mt-1 w-full bg-white px-8 py-4 text-lg font-semibold text-trust-blue shadow-lg ring-0 hover:bg-clean-white sm:w-auto"
-              >
-                İletişime Geç
-              </ButtonLink>
-            </div>
-          </div>
-        </section>
-      </Container>
-    </div>
+      <Footer />
+    </SolutionScrollWrapper>
   );
 }

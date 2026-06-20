@@ -1,20 +1,23 @@
 import { Container } from "@/components/Container";
 import { ButtonLink } from "@/components/Button";
-import { BadgeCheckIcon, TrophyIcon, ShieldCheckIcon, UserCheckIcon, BarChart3Icon, ZapIcon, TrendingUpIcon, UsersIcon, ClipboardListIcon } from "@/components/Icons";
+import { BadgeCheckIcon, ShieldCheckIcon, UserCheckIcon, BarChart3Icon, ZapIcon, TrendingUpIcon, UsersIcon, ClipboardListIcon } from "@/components/Icons";
 import { CountUp } from "@/components/CountUp";
 import { Reveal } from "@/components/Reveal";
 import { StepCard } from "@/components/StepCard";
 import Image from "next/image";
+import { ScrollIndicator } from "@/components/ScrollIndicator";
+import { SolutionScrollWrapper } from "@/components/SolutionScrollWrapper";
+import { Footer } from "@/components/Footer";
 
 export default function Home() {
   return (
-    <div className="bg-clean-white">
+    <SolutionScrollWrapper>
 
       {/* ── Hero ─────────────────────────────────────────────────── */}
-      <section className="relative overflow-hidden">
+      <section className="relative overflow-hidden" id="hero" style={{ scrollSnapAlign: 'start' }}>
         <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(900px_circle_at_20%_10%,rgba(0,82,204,0.14),transparent_55%),radial-gradient(700px_circle_at_80%_20%,rgba(0,163,191,0.12),transparent_50%)]" />
         <Container className="relative">
-          <div className="grid min-h-[calc(100svh-4rem)] gap-x-10 gap-y-16 py-12 sm:py-16 lg:grid-cols-2 lg:items-center lg:py-20">
+          <div className="grid min-h-[calc(100dvh-4rem)] gap-x-10 gap-y-16 py-12 sm:py-16 lg:grid-cols-2 lg:items-center lg:py-20">
             <div className="space-y-5">
               <h1 className="fade-in-up text-balance text-3xl font-bold leading-tight text-ink-black sm:text-4xl lg:text-5xl" style={{ animationDelay: "0ms" }}>
                 Afazi Terapisinde{" "}
@@ -31,11 +34,7 @@ export default function Home() {
               <div className="fade-in-up flex flex-wrap items-center gap-2 pt-1" style={{ animationDelay: "220ms" }}>
                 <div className="inline-flex items-center gap-2 rounded-full px-3 py-2 text-sm font-semibold text-ink-black ring-1 ring-soft-line">
                   <span className="inline-flex h-5 w-5 items-center justify-center text-trust-blue" aria-hidden="true"><BadgeCheckIcon /></span>
-                  TÜBİTAK 1812 Destekli
-                </div>
-                <div className="inline-flex items-center gap-2 rounded-full px-3 py-2 text-sm font-semibold text-ink-black ring-1 ring-soft-line">
-                  <span className="inline-flex h-5 w-5 items-center justify-center text-healing-teal" aria-hidden="true"><TrophyIcon /></span>
-                  IDEATHON 2025 Birincisi
+                  TÜBİTAK Destekli
                 </div>
               </div>
             </div>
@@ -50,21 +49,25 @@ export default function Home() {
                   height={576}
                   quality={100}
                   sizes="(max-width: 640px) 90vw, 433px"
-                  className="relative block max-h-[min(580px,calc(100svh-12rem))] w-auto [mix-blend-mode:multiply]"
+                  className="relative block max-h-[min(580px,calc(100dvh-12rem))] w-auto [mix-blend-mode:multiply]"
                   priority
                 />
               </div>
             </div>
           </div>
         </Container>
+        <ScrollIndicator />
       </section>
 
-      {/* ── Koyu Bölüm: Stats + Süreç + Destekçiler ────────────── */}
-      <section aria-label="Platform ve Süreç" className="relative overflow-hidden bg-ink-black h-[calc(100svh-4rem)]">
+      {/* ── Koyu Bölüm: Stats + Süreç ──────────────────────────── */}
+      <section
+        aria-label="Platform ve Süreç"
+        className="relative overflow-hidden bg-ink-black min-h-[calc(100dvh-4rem)] flex flex-col"
+        style={{ scrollSnapAlign: 'start' }}
+      >
         <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(900px_circle_at_50%_0%,rgba(0,82,204,0.18),transparent_60%)]" aria-hidden="true" />
-        <Container className="relative h-full flex flex-col justify-center py-8">
+        <Container className="relative flex-1 flex flex-col justify-center py-8">
 
-          {/* İstatistikler */}
           <Reveal>
             <div className="grid grid-cols-2 gap-6 sm:grid-cols-4">
               {[
@@ -85,7 +88,6 @@ export default function Home() {
 
           <div className="my-10 h-px bg-white/10" aria-hidden="true" />
 
-          {/* Nasıl Çalışır */}
           <Reveal>
             <div className="mb-8 text-center">
               <div className="mb-3 inline-flex items-center gap-2 rounded-full bg-white/10 px-3 py-1.5 text-sm font-semibold text-white/80 ring-1 ring-white/15">
@@ -110,13 +112,16 @@ export default function Home() {
             </div>
           </Reveal>
 
-
         </Container>
       </section>
 
       {/* ── Problem Bölümü ──────────────────────────────────────── */}
-      <section aria-label="Afazi terapisinde karşılaşılan zorluklar" className="bg-clean-white">
-        <Container className="py-16 sm:py-20">
+      <section
+        aria-label="Afazi terapisinde karşılaşılan zorluklar"
+        className="bg-clean-white min-h-[calc(100dvh-4rem)] flex items-center"
+        style={{ scrollSnapAlign: 'start' }}
+      >
+        <Container className="w-full py-14 sm:py-16">
           <Reveal>
             <div className="mb-12 text-center">
               <div className="badge mb-3 inline-flex">Zorluklar</div>
@@ -145,8 +150,12 @@ export default function Home() {
       </section>
 
       {/* ── Özellikler Özeti ─────────────────────────────────────── */}
-      <section aria-label="Platform özellikleri" className="bg-[#f4f7fb]">
-        <Container className="py-16 sm:py-20">
+      <section
+        aria-label="Platform özellikleri"
+        className="bg-[#f4f7fb] min-h-[calc(100dvh-4rem)] flex items-center"
+        style={{ scrollSnapAlign: 'start' }}
+      >
+        <Container className="w-full py-14 sm:py-16">
           <Reveal>
             <div className="mb-12 text-center">
               <div className="badge mb-3 inline-flex">Çözüm</div>
@@ -179,31 +188,8 @@ export default function Home() {
         </Container>
       </section>
 
+      <Footer />
 
-      {/* ── CTA ──────────────────────────────────────────────────── */}
-      <section aria-label="İletişime Geç" className="bg-white">
-        <Container className="py-16 sm:py-20">
-          <Reveal>
-            <div className="overflow-hidden rounded-3xl bg-trust-blue p-10 text-center shadow-soft">
-              <h2 className="text-2xl font-bold text-white sm:text-3xl">
-                Aphasia Reverbis'i Kurumunuzda Deneyin
-              </h2>
-              <p className="mt-3 text-white/80">
-                İletişime geçin, uzmanlarımız 24 saat içinde dönüş yapsın.
-              </p>
-              <div className="mt-8 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
-                <ButtonLink href="/demo" variant="ghost" className="border-2 border-white text-white hover:bg-white hover:text-trust-blue">
-                  İletişime Geç
-                </ButtonLink>
-                <ButtonLink href="/pricing" variant="ghost" className="text-white/80 hover:text-white">
-                  Fiyatlandırmayı İncele
-                </ButtonLink>
-              </div>
-            </div>
-          </Reveal>
-        </Container>
-      </section>
-
-    </div>
+    </SolutionScrollWrapper>
   );
 }

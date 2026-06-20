@@ -4,6 +4,7 @@ import "./globals.css";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { PageTransition } from "@/components/PageTransition";
+import { OrganizationJsonLd } from "@/components/StructuredData";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -12,26 +13,76 @@ const inter = Inter({
 });
 
 
+const SITE_URL = "https://www.aphasiareverbis.com";
+const DEFAULT_TITLE = "Aphasia Reverbis | Terapist Kontrollü Dijital Afazi Rehabilitasyonu";
+const DEFAULT_DESCRIPTION =
+  "Afazi rehabilitasyonunu dijitalleştiren terapist kontrollü platform: danışanlar için 24 bilimsel aktivite içeren mobil uygulama, terapistler için 8 boyutlu analiz paneliyle gerçek zamanlı ilerleme takibi. TÜBİTAK destekli, KVKK uyumlu, veri odaklı.";
+
 export const metadata: Metadata = {
-  title: "Aphasia Reverbis | Terapist Kontrollü Dijital Rehabilitasyon",
-  description:
-    "Türkiye'nin ilk terapist kontrollü afazi rehabilitasyon platformu. TÜBİTAK 1812 destekli veri odaklı çözüm.",
+  metadataBase: new URL(SITE_URL),
+  title: {
+    default: DEFAULT_TITLE,
+    template: "%s — Aphasia Reverbis",
+  },
+  description: DEFAULT_DESCRIPTION,
+  applicationName: "Aphasia Reverbis",
+  category: "health",
+  keywords: [
+    "afazi",
+    "afazi terapisi",
+    "afazi rehabilitasyonu",
+    "dil ve konuşma terapisi",
+    "konuşma terapisi uygulaması",
+    "teleterapi",
+    "dijital rehabilitasyon",
+    "terapist paneli",
+    "TÜBİTAK destekli",
+    "Aphasia Reverbis",
+  ],
+  authors: [{ name: "PALINGA Yazılım A.Ş.", url: "https://palingayazilim.com" }],
+  creator: "PALINGA Yazılım A.Ş.",
+  publisher: "PALINGA Yazılım A.Ş.",
+  alternates: {
+    canonical: "/",
+  },
   icons: {
-    icon: [{ url: "/images/AphasiaReverbisico.ico", type: "image/x-icon" }],
-    apple: [{ url: "/images/AphasiaReverbisico.ico", type: "image/x-icon" }],
+    apple: [{ url: "/apple-icon.png", sizes: "180x180", type: "image/png" }],
+  },
+  formatDetection: {
+    telephone: false,
   },
   openGraph: {
-    title: "Aphasia Reverbis | Terapist Kontrollü Dijital Rehabilitasyon",
-    description:
-      "Türkiye'nin ilk terapist kontrollü afazi rehabilitasyon platformu. TÜBİTAK 1812 destekli veri odaklı çözüm.",
     type: "website",
     locale: "tr_TR",
+    url: SITE_URL,
+    siteName: "Aphasia Reverbis",
+    title: DEFAULT_TITLE,
+    description: DEFAULT_DESCRIPTION,
+    images: [
+      {
+        url: "/og-cover.png",
+        width: 1200,
+        height: 630,
+        alt: "Aphasia Reverbis — Terapist Kontrollü Dijital Afazi Rehabilitasyonu",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Aphasia Reverbis | Terapist Kontrollü Dijital Rehabilitasyon",
-    description:
-      "Türkiye'nin ilk terapist kontrollü afazi rehabilitasyon platformu. TÜBİTAK 1812 destekli veri odaklı çözüm.",
+    title: DEFAULT_TITLE,
+    description: DEFAULT_DESCRIPTION,
+    images: ["/og-cover.png"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
   },
 };
 
@@ -43,6 +94,7 @@ export default function RootLayout({
   return (
     <html lang="tr" className={inter.variable}>
       <body className="min-h-dvh">
+        <OrganizationJsonLd />
         <Header />
         <main id="content" className="min-h-[calc(100dvh-4rem)]">
           <PageTransition>{children}</PageTransition>

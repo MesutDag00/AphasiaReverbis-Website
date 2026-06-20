@@ -1,10 +1,19 @@
+import type { Metadata } from "next";
 import { Container } from "@/components/Container";
 import { PricingToggle } from "@/components/PricingToggle";
-import { ButtonLink } from "@/components/Button";
+import { SolutionScrollWrapper } from "@/components/SolutionScrollWrapper";
+import { Footer } from "@/components/Footer";
+import { FaqJsonLd } from "@/components/StructuredData";
 
-export const metadata = {
-  title: "Fiyatlandırma — Aphasia Reverbis",
-  description: "Terapistler ve klinikler için esnek fiyat planları. Bireysel, Klinik ve Kurumsal seçenekler.",
+export const metadata: Metadata = {
+  title: "Fiyatlandırma",
+  description: "Bağımsız terapistlerden büyük hastanelere kadar her ölçek için esnek fiyat planları: Bireysel, Klinik ve Kurumsal seçenekler.",
+  alternates: { canonical: "/pricing" },
+  openGraph: {
+    title: "Fiyatlandırma — Aphasia Reverbis",
+    description: "Terapistler ve klinikler için esnek fiyat planları: Bireysel, Klinik ve Kurumsal.",
+    url: "/pricing",
+  },
 };
 
 const pricingFaq = [
@@ -32,30 +41,40 @@ const pricingFaq = [
 
 export default function PricingPage() {
   return (
-    <div className="bg-clean-white">
-      <section className="relative overflow-hidden">
+    <SolutionScrollWrapper>
+      <FaqJsonLd items={pricingFaq} />
+
+      {/* ── Kartlar ── */}
+      <section
+        className="relative overflow-hidden bg-clean-white min-h-[calc(100dvh-4rem)]"
+        style={{ scrollSnapAlign: 'start' }}
+      >
         <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(800px_circle_at_50%_0%,rgba(0,82,204,0.08),transparent_60%)]" />
-        <Container className="relative py-16 sm:py-20 lg:py-24">
+        <Container className="relative pt-10 pb-8 sm:pt-12">
           <div className="mx-auto max-w-2xl text-center">
-            <div className="badge mb-4 inline-flex">Şeffaf Fiyatlandırma</div>
-            <h1 className="text-balance text-4xl font-bold text-ink-black sm:text-5xl">
+            <div className="badge mb-3 inline-flex">Şeffaf Fiyatlandırma</div>
+            <h1 className="text-balance text-3xl font-bold text-ink-black sm:text-4xl">
               İhtiyacınıza Uygun <span className="text-trust-blue">Plan</span>
             </h1>
-            <p className="mt-4 text-lg text-soft-gray">
-              Bağımsız terapistlerden büyük hastanelere kadar her ölçek için esnek çözümler. Gerçek fiyat teklifi için bizimle iletişime geçin.
+            <p className="mt-3 text-base text-soft-gray">
+              Bağımsız terapistlerden büyük hastanelere kadar her ölçek için esnek çözümler.
             </p>
           </div>
-
-          <div className="mt-14">
+          <div className="mt-8">
             <PricingToggle />
           </div>
         </Container>
       </section>
 
-      {/* Pricing FAQ */}
-      <section className="border-t border-soft-line bg-white">
-        <Container className="py-16">
-          <h2 className="mb-8 text-center text-2xl font-bold text-ink-black">Fiyatlandırma Hakkında Sık Sorulanlar</h2>
+      {/* ── SSS ── */}
+      <section
+        className="border-t border-soft-line bg-white min-h-[calc(100dvh-4rem)] flex items-center"
+        style={{ scrollSnapAlign: 'start' }}
+      >
+        <Container className="w-full py-14">
+          <h2 className="mb-8 text-center text-2xl font-bold text-ink-black">
+            Fiyatlandırma Hakkında Sık Sorulanlar
+          </h2>
           <div className="mx-auto max-w-3xl divide-y divide-soft-line rounded-2xl bg-clean-white ring-1 ring-soft-line overflow-hidden">
             {pricingFaq.map(({ q, a }) => (
               <div key={q} className="px-6 py-5">
@@ -67,22 +86,8 @@ export default function PricingPage() {
         </Container>
       </section>
 
-      {/* Bottom CTA */}
-      <section className="bg-trust-blue">
-        <Container className="py-14 text-center">
-          <h2 className="text-2xl font-bold text-white sm:text-3xl">
-            Hangi planın size uygun olduğundan emin değil misiniz?
-          </h2>
-          <p className="mt-3 text-white/80">
-            Uzmanlarımız ihtiyacınızı analiz edip size özel teklif hazırlasın.
-          </p>
-          <div className="mt-8 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
-            <ButtonLink href="/demo" variant="ghost" className="border-2 border-white text-white hover:bg-white hover:text-trust-blue">
-              İletişime Geç
-            </ButtonLink>
-          </div>
-        </Container>
-      </section>
-    </div>
+      <Footer />
+
+    </SolutionScrollWrapper>
   );
 }

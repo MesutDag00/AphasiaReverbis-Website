@@ -1,9 +1,17 @@
+import type { Metadata } from "next";
 import { Container } from "@/components/Container";
 import { AccordionItem } from "@/components/AccordionItem";
+import { FaqJsonLd } from "@/components/StructuredData";
 
-export const metadata = {
-  title: "Sıkça Sorulan Sorular — Aphasia Reverbis",
-  description: "Aphasia Reverbis platformu hakkında merak ettiğiniz her şey: teknik, güvenlik, fiyat ve entegrasyon.",
+export const metadata: Metadata = {
+  title: "Sıkça Sorulan Sorular",
+  description: "Aphasia Reverbis hakkında teknik, güvenlik (KVKK), fiyatlandırma ve entegrasyon konularında en sık sorulan soruların yanıtları.",
+  alternates: { canonical: "/sss" },
+  openGraph: {
+    title: "Sıkça Sorulan Sorular — Aphasia Reverbis",
+    description: "Teknik, güvenlik, fiyatlandırma ve entegrasyon hakkında en sık sorulan sorular.",
+    url: "/sss",
+  },
 };
 
 const categories = [
@@ -74,7 +82,7 @@ const categories = [
       },
       {
         q: "Verilerimi silme hakkım var mı?",
-        a: "Evet. KVKK kapsamında 'Unutulma Hakkı' dahilinde verilerinizin silinmesini talep edebilirsiniz. Hesap Silme sayfamız üzerinden başvurabilir ya da palingayazilim@gmail.com adresine e-posta gönderebilirsiniz.",
+        a: "Evet. KVKK kapsamında 'Unutulma Hakkı' dahilinde verilerinizin silinmesini talep edebilirsiniz. Hesap Silme sayfamız üzerinden başvurabilir ya da aphasiareverbis@palingayazilim.com adresine e-posta gönderebilirsiniz.",
       },
     ],
   },
@@ -119,8 +127,10 @@ const categories = [
 ];
 
 export default function SssPage() {
+  const faqItems = categories.flatMap((cat) => cat.items);
   return (
     <div className="bg-clean-white">
+      <FaqJsonLd items={faqItems} />
       <section className="relative overflow-hidden">
         <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(700px_circle_at_50%_0%,rgba(0,163,191,0.06),transparent_55%)]" />
         <Container className="relative py-16 sm:py-20">

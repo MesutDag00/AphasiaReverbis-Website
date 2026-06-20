@@ -1,5 +1,13 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { Container } from "@/components/Container";
+
+export const metadata: Metadata = {
+  title: "Çerez Politikası",
+  description:
+    "Aphasia Reverbis çerez politikası: web sitemizde kullanılan çerez türleri, kullanım amaçları ve çerez tercihlerinizi nasıl yönetebileceğiniz.",
+  alternates: { canonical: "/cerez-politikasi" },
+};
 
 export default function CookiePolicyPage() {
   return (

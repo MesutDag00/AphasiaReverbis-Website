@@ -1,5 +1,13 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { Container } from "@/components/Container";
+
+export const metadata: Metadata = {
+  title: "KVKK Aydınlatma Metni",
+  description:
+    "Aphasia Reverbis kişisel verilerin korunması (KVKK, 6698 sayılı Kanun) aydınlatma metni: işlenen veriler, amaçlar, haklarınız ve veri güvenliği.",
+  alternates: { canonical: "/kvkk" },
+};
 
 export default function KvkkPage() {
   return (
