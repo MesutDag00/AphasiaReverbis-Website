@@ -11,8 +11,8 @@ export const TONES: Record<ToneColor, string> = {
   ink: "bg-ink-black/5 text-ink-black ring-soft-line",
 };
 
-/** Check-list yuvarlağı tonu (ring yok). */
+/** Check-list ikon rengi (minimal — arka plan yok). */
 export const CHECK_TONES: Record<"trust-blue" | "healing-teal", string> = {
-  "trust-blue": "bg-trust-blue/10 text-trust-blue",
-  "healing-teal": "bg-healing-teal/10 text-healing-teal",
+  "trust-blue": "text-trust-blue",
+  "healing-teal": "text-healing-teal",
 };

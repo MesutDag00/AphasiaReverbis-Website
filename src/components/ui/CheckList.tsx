@@ -13,18 +13,13 @@ export function CheckList({
   tone: "trust-blue" | "healing-teal";
 }) {
   return (
-    <ul className="space-y-4">
+    <ul className="space-y-3">
       {items.map((item) => (
         <li key={item} className="flex items-center gap-3">
-          <span
-            className={cn(
-              "inline-flex h-7 w-7 shrink-0 items-center justify-center rounded-full",
-              CHECK_TONES[tone],
-            )}
-          >
+          <span className={cn("h-4 w-4 shrink-0", CHECK_TONES[tone])}>
             <CheckIcon />
           </span>
-          <span className="text-base font-semibold text-ink-black">{item}</span>
+          <span className="text-base font-medium text-ink-black">{item}</span>
         </li>
       ))}
     </ul>
