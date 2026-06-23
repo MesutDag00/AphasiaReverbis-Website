@@ -137,7 +137,7 @@ export function PricingToggle() {
             <ul className="my-8 flex flex-grow flex-col gap-3">
               {plan.features.map((f) => (
                 <li key={f} className="flex items-start gap-2 text-sm">
-                  <span className={cn("mt-0.5 shrink-0", plan.highlighted ? "text-healing-teal" : "text-trust-blue")}>
+                  <span className={cn("mt-0.5 inline-flex h-4 w-4 shrink-0 items-center justify-center", plan.highlighted ? "text-healing-teal" : "text-trust-blue")}>
                     <CheckIcon />
                   </span>
                   <span className={plan.highlighted ? "text-white/90" : "text-ink-black"}>{f}</span>
